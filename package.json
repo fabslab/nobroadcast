@@ -10,5 +10,9 @@
     "express": "*",
     "stylus": "*",
     "nib": "*"
+  },
+  "engines": {
+    "node": "*",
+    "npm": "*"
   }
 }

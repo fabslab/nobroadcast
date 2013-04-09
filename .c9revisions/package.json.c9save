@@ -4,3 +4,4 @@
 {"ts":1365485022692,"patch":[[{"diffs":[[0,"\": \""],[-1,"3.0.x"],[1,"*"],[0,"\",\n "]],"start1":147,"start2":147,"length1":13,"length2":9}]],"length":194,"saved":false}
 {"contributors":[],"silentsave":false,"ts":1365485529544,"patch":[[{"diffs":[[0,"dcast\",\n"],[1,"  \"author\": \"Fabien Brooke\"\n"],[0,"  \"versi"]],"start1":19,"start2":19,"length1":16,"length2":44}]],"length":222,"saved":false}
 {"ts":1365485533022,"patch":[[{"diffs":[[0," Brooke\""],[1,","],[0,"\n  \"vers"]],"start1":46,"start2":46,"length1":16,"length2":17}]],"length":223,"saved":false}
+{"contributors":[],"silentsave":false,"ts":1365486722008,"patch":[[{"diffs":[[0,"b\": \"*\"\n"],[1,"  },\n  \"engines\": {\n    \"node\": \"*\",\n    \"npm\": \"*\"\n"],[0,"  }\n}"]],"start1":210,"start2":210,"length1":13,"length2":65}]],"length":275,"saved":false}
