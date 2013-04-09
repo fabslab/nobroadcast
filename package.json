@@ -7,9 +7,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "*",
-    "stylus": "*",
-    "nib": "*"
+    "express": "*"
   },
   "engines": {
     "node": "0.10.*",
