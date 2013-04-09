@@ -1,0 +1,22 @@
+{
+  "name": "No-Broadcast-Album-Teaser",
+  "version": "0.0.0",
+  "description": "Page to promote No Broadcast's debut album. http://teaser.nobroadcast.com",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "music",
+    "album",
+    "band",
+    "video",
+    "teaser",
+    "promo",
+    "launch",
+    "rock"
+  ],
+  "author": "Fabien Brooke",
+  "license": "Unlicense"
+}
