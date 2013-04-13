@@ -4,18 +4,14 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  -moz-border-image: url(bg-image.png) 0;  /* (Firefox 3.5) */
+  -moz-border-image: url(../images/nobroadcast_bg.jpg) 0;  /* (Firefox 3.5) */
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/nobroadcast_bg.jpg', sizingMethod='scale');
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/nobroadcast_bg.jpg', sizingMethod='scale')";
-  height: 100%;
-}
-
-body {
-  display: -webkit-flex;
-  display: flex;
-  height: 100%;
 }
 
 #player-container {
-  margin: auto;
+  width: 880px;
+  height: 620px;
+  margin: 0 auto;
+  margin-top: 5%;
 }

@@ -1,7 +1,7 @@
-var express = require('express')
-  , http = require('http')
-  , path = require('path');
-  
+var express = require('express'),
+    http = require('http'),
+    path = require('path');
+
 var app = express();
 
 app.set('port', process.env.PORT || 3000);
