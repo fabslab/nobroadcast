@@ -1,39 +1,42 @@
-//This code loads the IFrame Player API code asynchronously.
-var tag = document.createElement('script');
-
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-// This function creates an <iframe> (and YouTube player)
-// after the API code downloads.
-var player;
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player('teaser', {
-    height: '620',
-    width: '880',
-    videoId: 'WWQOvs3qmkk',
-    playerVars: {
-      controls: 0,
-      showinfo: 0
-    },
-    events: {
-      'onReady': onPlayerReady,
-      'onStateChange': onPlayerStateChange
-    }
+$(function() {
+  $('.play').click(function() {
+    $(this).toggleClass('play').toggleClass('pause');
   });
-}
 
-// The API will call this function when the video player is ready.
-function onPlayerReady(event) {
-  event.target.playVideo();
-}
+  $(window).resize(function() {
+    var player = $('.player');
+    player.css({
+      left: ($(window).width() - player.outerWidth()) / 2,
+      top: ($(window).height() - player.outerHeight()) - 100
+    });
+  });
 
-// The API calls this function when the player's state changes.
-function onPlayerStateChange(event) {
+  $(window).resize();
 
-}
+});
 
-function stopVideo() {
-  player.stopVideo();
-}
+// setup the audio context
+window.playAlbum = (function playAlbum() {
+
+  // create audio element for first track
+
+
+
+  var AudioContext = window.AudioContext || window.webkitAudioContext;
+
+  if (!AudioContext) {
+    // Web Audio API not supported
+    // TODO: create audio element and play without visualization
+    return;
+  }
+
+  var context = new contextClass();
+
+  // TODO: receive binary stream of FLAC audio for each track
+  // decode it and run it through an analyser node to create visualization on canvas element
+  // before sending it to the destination to play it
+
+  // set up playback controls
+
+
+})();

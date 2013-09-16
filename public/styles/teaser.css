@@ -1,0 +1,17 @@
+html {
+  background: #212121 url(../images/nobroadcast_bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -moz-border-image: url(../images/nobroadcast_bg.jpg) 0;  /* (Firefox 3.5) */
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/nobroadcast_bg.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/nobroadcast_bg.jpg', sizingMethod='scale')";
+}
+
+#player-container {
+  width: 880px;
+  height: 620px;
+  margin: 0 auto;
+  margin-top: 5%;
+}
