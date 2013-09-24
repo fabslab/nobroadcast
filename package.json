@@ -7,8 +7,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "*",
-    "ws": "~0.4.28"
+    "connect": "*"
   },
   "engines": {
     "node": "0.10.*",

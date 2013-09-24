@@ -3,63 +3,68 @@ html {
 }
 
 body {
-  position: relative;
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  color: rgb(44, 44, 44);
+  height: 100%;
+  margin: 0;
   background-color: #e0e0e0;
-  background-image: url(../images/album.jpg);
+  background-image: url(../images/album3.jpg);
   background-position: center top;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .player {
-  position: absolute;
   width: 300px;
-  margin-left: -140px;
+  margin: 0 auto;
+  margin-top: 90px;
+  padding-right: 200px;
 }
 
-.songs {
+#songs {
   list-style: none;
   padding: 0;
-  font-family: 'helvetica neue', helvetica, arial, sans-serif;
   font-size: 18px;
   color: rgba(44, 44, 44, 0.5);
   text-align: center;
-  margin-bottom: 50px
+  margin-bottom: 50px;
+  transition: color 0.2s;
 }
 
-.songs li {
+#songs li {
+  display: block;
+  cursor: pointer;
   position: relative;
   padding: 5px;
 }
 
-.songs .playing {
-  display: block;
+#songs .active {
   color: rgba(44, 44, 44, 1.0);
+  transition: color 0.2s;
 }
 
-.songs .playing:before {
+#songs .playing:before {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -5px;
+  left: 10px;
   content: "";
   width: 40px;
   height: 40px;
   background: url(../images/indicator.gif);
 }
 
-.songs .playing + li {
-  display: block;
-}
-
 .controls {
   margin: 0 auto;
-  width: 296px;
+  width: 300px;
+  text-align: center;
 }
 
 .controls div {
+  cursor: pointer;
   display: inline-block;
 }
 
-.play, .pause {
+#play {
   margin-bottom: -5px;
   height: 54px;
   width: 150px;
@@ -67,35 +72,68 @@ body {
   transition: opacity 0.2s;
 }
 
-.play:hover, .pause:hover {
+#play:hover {
   opacity: 1.0;
   transition: opacity 0.2s;
 }
 
-.play {
+#play {
   background: url(../images/play.png) 55% no-repeat;
 }
 
-.pause {
+#play.pause {
   background: url(../images/pause.png) center no-repeat;
 }
 
-.prev, .next {
+#prev, #next {
   height: 44px;
   width: 69px;
   opacity: 0.8;
   transition: opacity 0.2s;
 }
 
-.prev:hover, .next:hover {
+#prev:hover, #next:hover {
   opacity: 1.0;
   transition: opacity 0.2s;
 }
 
-.prev {
+#prev {
   background-image: url(../images/prev.png);
 }
 
-.next {
+#next {
   background-image: url(../images/next.png);
+}
+
+.purchase {
+  text-align: right;
+  position: absolute;
+  margin: 1%;
+  top: 0;
+  right: 0;
+}
+
+.purchase a {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.waveform {
+  width: 700px;
+  height: 64px;
+  margin: 0 auto;
+  margin-top: 240px;
+  padding-right: 230px;
+}
+
+.waveform #base {
+  position: absolute;
+  opacity: 0.5;
+}
+
+.waveform #cover {
+  background-image: url(../images/waveforms/1.png);
+  z-index: 9;
+  width: 0;
+  height: 64px;
 }
