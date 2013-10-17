@@ -13,7 +13,7 @@
   var ext = codecs.opus ? '.opus' : codecs.ogg ? '.ogg' : codecs.mp3 ? '.mp3' : '';
   track.src = 'audio/1' + ext;
 
-  var playButton, waveBase, waveCover, prevButton, nextButton, songEls;
+  var playButton, waveBase, waveCover, prevButton, nextButton, songEls, buyButton, purchaseLinks;
 
 
   // Web audio here
@@ -31,16 +31,20 @@
   }
 
 
-
-
   document.addEventListener('DOMContentLoaded', function() {
 
+    buyButton = document.getElementById('buy-now');
+    purchaseLinks = document.getElementsByClassName('purchase')[0];
     playButton = document.getElementById('play');
     prevButton = document.getElementById('prev');
     nextButton = document.getElementById('next');
     waveBase = document.getElementById('base');
     waveCover = document.getElementById('cover');
     songEls = document.getElementById('songs').children;
+
+    buyButton.addEventListener('click', function() {
+      purchaseLinks.style.display = 'block';
+    });
 
     document.addEventListener('keydown', function(e) {
       if (e.keyCode == 32) togglePlayback();
@@ -62,7 +66,6 @@
       var percentComplete = ((this.currentTime / this.duration) * 100);
       waveCover.style.width = percentComplete + '%';
     });
-
   });
 
   function prev() {

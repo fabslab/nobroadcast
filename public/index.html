@@ -8,18 +8,26 @@
 </head>
 <body>
 
-<div class="purchase">
-  <a href="itms://itunes.apple.com/us/album/no-broadcast/id664628199" target="itunes_store">
-    <img alt="Download on iTunes" src="images/iTunes-badge.svg" />
+<div class="links">
+  <a href="javascript:;">
+    <img alt="Biography" src="images/bio.svg" />
   </a>
-  <a href="http://www.cdbaby.com/cd/nobroadcast" target="_blank">
-    <img alt="Order CD" src="images/cdbaby.svg" />
+  <a href="javascript:;" id="buy-now">
+      <img alt="Buy Now" src="images/buynow.svg" />
   </a>
+  <div class="purchase">
+    <a href="itms://itunes.apple.com/us/album/no-broadcast/id664628199" target="itunes_store">
+        <img alt="Download on iTunes" src="images/iTunes-badge.svg" />
+    </a>
+    <a href="http://www.cdbaby.com/cd/nobroadcast" target="_blank">
+        <img alt="Order CD" src="images/cdbaby.svg" />
+    </a>
+  </div>
 </div>
 
 <div class="waveform">
-  <img id="base" src="images/waveforms/1-bg.png" />
-  <div id="cover"></div>
+    <img id="base" src="images/waveforms/1-bg.png" />
+    <div id="cover"></div>
 </div>
 
 <div class="player">
@@ -40,6 +48,11 @@
   </div>
 </div>
 
+<div class="bio-overlay">
+
+</div>
+
+<script src="scripts/vex.min.js"></script>
 <script src="scripts/main.js"></script>
 </body>
 </html>

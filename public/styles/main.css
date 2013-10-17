@@ -8,7 +8,7 @@ body {
   height: 100%;
   margin: 0;
   background-color: #e0e0e0;
-  background-image: url(../images/album3.jpg);
+  background-image: url(../images/album.jpg);
   background-position: center top;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -66,29 +66,30 @@ body {
 
 #play {
   margin-bottom: -5px;
-  height: 54px;
+  height: 60px;
   width: 150px;
+}
+
+#play {
+  background: url(../images/play.svg) 55% no-repeat;
+  background-size: contain;
+}
+
+#play.pause {
+  background: url(../images/pause.svg) center no-repeat;
+  background-size: contain;
   opacity: 0.9;
   transition: opacity 0.2s;
 }
 
-#play:hover {
-  opacity: 1.0;
-  transition: opacity 0.2s;
-}
-
-#play {
-  background: url(../images/play.png) 55% no-repeat;
-}
-
-#play.pause {
-  background: url(../images/pause.png) center no-repeat;
+#play.pause:hover {
+  opacity: 1;
 }
 
 #prev, #next {
-  height: 44px;
-  width: 69px;
-  opacity: 0.8;
+  height: 45px;
+  width: 70px;
+  opacity: 0.9;
   transition: opacity 0.2s;
 }
 
@@ -98,14 +99,16 @@ body {
 }
 
 #prev {
-  background-image: url(../images/prev.png);
+  background-image: url(../images/prev.svg);
+  background-size: contain;
 }
 
 #next {
-  background-image: url(../images/next.png);
+  background-image: url(../images/next.svg);
+  background-size: contain;
 }
 
-.purchase {
+.links {
   text-align: right;
   position: absolute;
   margin: 1%;
@@ -113,9 +116,13 @@ body {
   right: 0;
 }
 
-.purchase a {
+.links a {
   display: block;
   margin-bottom: 2px;
+}
+
+.purchase {
+  display: none;
 }
 
 .waveform {

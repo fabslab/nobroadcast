@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="110" height="40" viewBox="0, 0, 110, 40">
+  <g id="Layer 1">
+    <path d="M105.272,40 L4.73,40 C2.123,40 0.002,37.882 0.002,35.277 L0.002,4.726 C0.002,2.12 2.123,0 4.73,0 L105.272,0 C107.875,0 110,2.12 110,4.726 L110,35.277 C109.999,37.882 107.877,40 105.272,40 L105.272,40 z" fill="#A6A6A6"/>
+    <path d="M109.108,35.278 C109.108,37.396 107.395,39.108 105.274,39.108 L4.733,39.108 C2.614,39.108 0.894,37.396 0.894,35.278 L0.894,4.727 C0.894,2.611 2.614,0.891 4.733,0.891 L105.274,0.891 C107.395,0.891 109.108,2.611 109.108,4.727 L109.108,35.278 z" fill="#000000"/>
+    <text transform="matrix(1, 0, 0, 1, 42.866, 20)">
+      <tspan x="-34.769" y="4.491" font-family="Agenda-Light" font-size="14" fill="#FFFFFF">BIOGRAPHY</tspan>
+    </text>
+    <path d="M80.111,21.097 L82.268,21.085 L83.376,19.022 C83.376,19.022 84.764,22.933 84.771,22.88 C84.779,22.827 86.987,16.56 86.987,16.56 L88.219,25.178 L90.435,13.195 L92.815,27.804 L95.031,14.918 L97.575,23.372 L99.052,20.828 L101.381,20.794" fill-opacity="0" stroke="#FFFFFF" stroke-width="1" stroke-linecap="square" stroke-linejoin="round"/>
+  </g>
+  <defs/>
+</svg>
