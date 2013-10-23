@@ -89,7 +89,7 @@ body {
 #prev, #next {
   height: 45px;
   width: 70px;
-  opacity: 0.9;
+  opacity: 0.85;
   transition: opacity 0.2s;
 }
 
@@ -116,13 +116,13 @@ body {
   right: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .links a {
   display: block;
   margin-bottom: 2px;
-}
-
-.purchase {
-  display: none;
 }
 
 .waveform {
@@ -143,4 +143,50 @@ body {
   z-index: 9;
   width: 0;
   height: 64px;
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.overlay h2 {
+  text-transform: uppercase;
+  font-weight: 200;
+  font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+}
+
+.overlay-content {
+  width: 600px;
+  margin: 160px auto;
+  background-color: white;
+  border: 2px solid black;
+  padding: 2em;
+  position: relative;
+}
+
+.overlay-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.overlay-close:before {
+  position: absolute;
+  content: "\00D7";
+  font-size: 40px;
+  font-weight: normal;
+  line-height: 80px;
+  height: 80px;
+  width: 80px;
+  text-align: center;
+  top: 3px;
+  right: 3px;
+  color: black;
 }

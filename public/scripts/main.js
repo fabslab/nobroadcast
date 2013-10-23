@@ -13,28 +13,20 @@
   var ext = codecs.opus ? '.opus' : codecs.ogg ? '.ogg' : codecs.mp3 ? '.mp3' : '';
   track.src = 'audio/1' + ext;
 
-  var playButton, waveBase, waveCover, prevButton, nextButton, songEls, buyButton, purchaseLinks;
-
-
-  // Web audio here
-
-  var AudioContext = window.AudioContext || window.webkitAudioContext;
-
-  if (AudioContext) {
-    window.addEventListener('load', function() {
-      var context = new AudioContext();
-      var source = context.createMediaElementSource();
-      var analyzer = context.createAnalyzerNode();
-      source.connect(analyser);
-      analyzer.connect(context.destination);
-    });
-  }
+  var playButton, waveBase, waveCover, prevButton, nextButton, songEls;
 
 
   document.addEventListener('DOMContentLoaded', function() {
 
-    buyButton = document.getElementById('buy-now');
-    purchaseLinks = document.getElementsByClassName('purchase')[0];
+    var purchaseLink, bioLink, bioOverlay, storesOverlay, bioClose, storesClose;
+
+    bioLink = document.getElementById('biography-link');
+    purchaseLink = document.getElementById('purchase-link');
+    bioOverlay = document.getElementById('bio-overlay');
+    storesOverlay = document.getElementById('stores-overlay');
+    bioClose = document.getElementsByClassName('overlay-close')[0];
+    storesClose = document.getElementsByClassName('overlay-close')[1];
+
     playButton = document.getElementById('play');
     prevButton = document.getElementById('prev');
     nextButton = document.getElementById('next');
@@ -42,10 +34,7 @@
     waveCover = document.getElementById('cover');
     songEls = document.getElementById('songs').children;
 
-    buyButton.addEventListener('click', function() {
-      purchaseLinks.style.display = 'block';
-    });
-
+    // support use of space bar and array keys
     document.addEventListener('keydown', function(e) {
       if (e.keyCode == 32) togglePlayback();
       else if (e.keyCode == 37) prev();
@@ -65,6 +54,20 @@
     track.addEventListener('timeupdate', function() {
       var percentComplete = ((this.currentTime / this.duration) * 100);
       waveCover.style.width = percentComplete + '%';
+    });
+
+    bioLink.addEventListener('click', function displayBiography() {
+      bioOverlay.style.display = 'block';
+    });
+    purchaseLink.addEventListener('click', function() {
+      storesOverlay.style.display = 'block';
+    });
+
+    bioClose.addEventListener('click', function closeBioOverlay() {
+      bioOverlay.style.display = 'none';
+    });
+    storesClose.addEventListener('click', function closeStoresOverlay() {
+      storesOverlay.style.display = 'none';
     });
   });
 
