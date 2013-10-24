@@ -18,14 +18,12 @@
 
   document.addEventListener('DOMContentLoaded', function() {
 
-    var purchaseLink, bioLink, bioOverlay, storesOverlay, bioClose, storesClose;
+    var purchaseLink, bioLink, bioOverlay, storesOverlay;
 
     bioLink = document.getElementById('biography-link');
     purchaseLink = document.getElementById('purchase-link');
     bioOverlay = document.getElementById('bio-overlay');
     storesOverlay = document.getElementById('stores-overlay');
-    bioClose = document.getElementsByClassName('overlay-close')[0];
-    storesClose = document.getElementsByClassName('overlay-close')[1];
 
     playButton = document.getElementById('play');
     prevButton = document.getElementById('prev');
@@ -61,13 +59,6 @@
     });
     purchaseLink.addEventListener('click', function() {
       storesOverlay.style.display = 'block';
-    });
-
-    bioClose.addEventListener('click', function closeBioOverlay() {
-      bioOverlay.style.display = 'none';
-    });
-    storesClose.addEventListener('click', function closeStoresOverlay() {
-      storesOverlay.style.display = 'none';
     });
   });
 
