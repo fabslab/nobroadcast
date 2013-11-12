@@ -217,8 +217,8 @@ a {
   padding-top: 65px;
   margin-top: -55px;
   margin-bottom: 15px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
 
 #stores {
