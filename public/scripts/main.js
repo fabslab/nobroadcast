@@ -18,12 +18,12 @@
 
   document.addEventListener('DOMContentLoaded', function() {
 
-    var purchaseLink, bioLink, bioOverlay, storesOverlay;
+    var purchaseLink, bioLink, biography, stores;
 
     bioLink = document.getElementById('biography-link');
     purchaseLink = document.getElementById('purchase-link');
-    bioOverlay = document.getElementById('bio-overlay');
-    storesOverlay = document.getElementById('stores-overlay');
+    biography = document.getElementById('biography');
+    stores = document.getElementById('stores');
 
     playButton = document.getElementById('play');
     prevButton = document.getElementById('prev');
@@ -55,11 +55,20 @@
     });
 
     bioLink.addEventListener('click', function displayBiography() {
-      bioOverlay.style.display = 'block';
+      toggleSection(biography);
     });
     purchaseLink.addEventListener('click', function() {
-      storesOverlay.style.display = 'block';
+      toggleSection(stores);
     });
+
+    function toggleSection(el) {
+      var display = el.style.display;
+      if (display == 'none') {
+        el.style.display = 'block';
+      } else {
+        el.style.display = 'none';
+      }
+    }
   });
 
   function prev() {

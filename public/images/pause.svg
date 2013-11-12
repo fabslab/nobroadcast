@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="90" height="80" viewBox="0, 0, 90, 80">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="83" height="82" viewBox="0, 0, 83, 82">
   <g id="Layer 2">
     <g>
       <g>
-        <path d="M37.059,80 L0,80 L0,-0 L37.059,-0 z" fill="#000000"/>
-        <path d="M37.059,80 L0,80 L0,-0 L37.059,-0 z" fill-opacity="0" stroke="#545454" stroke-width="2"/>
+        <path d="M33.528,81 L1.528,81 L1.528,1 L33.528,1 z" fill="#000000"/>
+        <path d="M33.528,81 L1.528,81 L1.528,1 L33.528,1 z" fill-opacity="0" stroke="#545454" stroke-width="2"/>
       </g>
       <g>
-        <path d="M90,80 L52.941,80 L52.941,-0 L90,-0 z" fill="#000000"/>
-        <path d="M90,80 L52.941,80 L52.941,-0 L90,-0 z" fill-opacity="0" stroke="#545454" stroke-width="2"/>
+        <path d="M81.472,81 L49.472,81 L49.472,1 L81.472,1 z" fill="#000000"/>
+        <path d="M81.472,81 L49.472,81 L49.472,1 L81.472,1 z" fill-opacity="0" stroke="#545454" stroke-width="2"/>
       </g>
     </g>
   </g>

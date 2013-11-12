@@ -31,10 +31,19 @@ body {
   transition: color 0.2s;
 }
 
+li {
+  list-style: none;
+}
+
 #songs li {
   display: block;
   cursor: pointer;
   position: relative;
+  padding: 5px;
+}
+
+li a {
+  display: block;
   padding: 5px;
 }
 
@@ -78,7 +87,7 @@ body {
 #play.pause {
   background: url(../images/pause.svg) center no-repeat;
   background-size: contain;
-  opacity: 0.9;
+  opacity: 0.85;
   transition: opacity 0.2s;
 }
 
@@ -111,18 +120,23 @@ body {
 .links {
   text-align: right;
   position: absolute;
-  margin: 1%;
+  margin-top: 3%;
   top: 0;
   right: 0;
 }
 
 a {
   text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
 }
 
-.links a {
+.links > a {
   display: block;
-  margin-bottom: 2px;
+  margin-right: 45px;
+}
+
+#purchase-link {
+  margin-top: 10px;
 }
 
 .waveform {
@@ -189,4 +203,40 @@ a {
   top: 3px;
   right: 3px;
   color: black;
+}
+
+#biography, #stores {
+  border: 2px solid #c0c0c0;
+  border-right: none;
+  background: rgba(0, 0, 0, 0.9);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+  width: 175px;
+  text-align: left;
+  padding: 15px;
+  padding-top: 65px;
+  margin-top: -55px;
+  margin-bottom: 15px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#stores {
+  text-align: center;
+  font-size: 16px;
+  padding-top: 60px;
+}
+
+#stores a {
+  -moz-transition: color 0.2s;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+#stores a:hover {
+  color: white;
+  font-weight: bold;
+  -moz-transition: color 0.2s;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
 }
