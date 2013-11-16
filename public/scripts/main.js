@@ -10,7 +10,7 @@
     mp3: !!track.canPlayType('audio/mpeg;').replace(codecRegex,'')
   };
 
-  var ext = codecs.opus ? '.opus' : codecs.ogg ? '.ogg' : codecs.mp3 ? '.mp3' : '';
+  var ext = codecs.opus ? '.opus' : codecs.ogg ? '.ogg' : '.mp3';
   track.src = 'audio/1' + ext;
 
   var playButton, waveBase, waveCover, prevButton, nextButton, songEls;
