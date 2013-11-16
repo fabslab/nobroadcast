@@ -32,9 +32,9 @@
     waveCover = document.getElementById('cover');
     songEls = document.getElementById('songs').children;
 
-    // support use of space bar and array keys
+    // support use of space bar and arrow keys
     document.addEventListener('keydown', function(e) {
-      if (e.keyCode == 32) togglePlayback();
+      if (e.keyCode == 32) togglePlayback(e);
       else if (e.keyCode == 37) prev();
       else if (e.keyCode == 39) next();
     });
@@ -57,7 +57,7 @@
     bioLink.addEventListener('click', function displayBiography() {
       toggleSection(biography);
     });
-    purchaseLink.addEventListener('click', function() {
+    purchaseLink.addEventListener('click', function displayStores() {
       toggleSection(stores);
     });
 
@@ -92,7 +92,8 @@
     }
   }
 
-  function togglePlayback() {
+  function togglePlayback(e) {
+    if (e) e.preventDefault();
     var active = document.getElementsByClassName('active')[0];
     ~active.className.indexOf('playing') ? active.className = 'active' : active.className = 'active playing';
     playButton.className ? playButton.className = '' : playButton.className = 'pause';
