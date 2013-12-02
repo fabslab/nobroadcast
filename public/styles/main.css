@@ -2,18 +2,16 @@ html {
   height: 100%;
 }
 
-@media screen and (min-width: 1600px) {
-  html {
-    -o-transform: scale(1.1) translate(4%, 4.5%);
-    -webkit-transform: scale(1.1) translate(4%, 4.5%);
-    -ms-transform: scale(1.1) translate(4%, 4.5%);
-    transform: scale(1.1) translate(4%, 4.5%);
-    width: 92%;
-  }
+html.scale-up {
+  -o-transform: scale(1.1) translate(4%, 4.5%);
+  -webkit-transform: scale(1.1) translate(4%, 4.5%);
+  -ms-transform: scale(1.1) translate(4%, 4.5%);
+  transform: scale(1.1) translate(4%, 4.5%);
+  width: 92%;
 }
 
 @-moz-document url-prefix() {
-  html {
+  html.scale-up {
     transform: none;
     width: 100%;
   }

@@ -69,6 +69,20 @@
         el.style.display = 'none';
       }
     }
+
+    // scale everything up for higher res screens
+    // using media queries resulted in a rendering bug when first viewing the page
+    window.addEventListener('resize', resize);
+
+    function resize() {
+      if (window.innerWidth >= 1600) {
+        document.documentElement.className = 'scale-up';
+      } else {
+        document.documentElement.className = '';
+      }
+    }
+
+    resize();
   });
 
   function prev() {
