@@ -72,6 +72,8 @@
 
     // scale everything up for higher res screens
     // using media queries resulted in a rendering bug when first viewing the page
+    // due to image not being loaded completely i believe - so using window.onload event
+    window.addEventListener('load', resize);
     window.addEventListener('resize', resize);
 
     function resize() {
@@ -82,7 +84,6 @@
       }
     }
 
-    resize();
   });
 
   function prev() {
