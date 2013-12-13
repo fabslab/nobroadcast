@@ -77,7 +77,7 @@
     window.addEventListener('resize', resize);
 
     function resize() {
-      if (window.innerWidth >= 1600) {
+      if (window.innerWidth >= 1600 && window.innerHeight >= 900) {
         document.documentElement.className = 'scale-up';
       } else {
         document.documentElement.className = '';
