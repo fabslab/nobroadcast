@@ -104,6 +104,9 @@
       playTrack(trackNum);
     } else if (track.ended) {
       active.className = '';
+      // reset back to first song, wait to play
+      document.getElementById(1).className = 'active';
+      playButton.className = '';
     }
   }
 
