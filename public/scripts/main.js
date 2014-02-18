@@ -13,15 +13,15 @@
   var ext = codecs.opus ? '.opus' : codecs.ogg ? '.ogg' : '.mp3';
   track.src = 'audio/1' + ext;
 
-  var playButton, waveBase, waveCover, prevButton, nextButton, songEls;
+  var playButton, waveBase, waveCover, prevButton, nextButton, canvas, songEls;
 
 
   document.addEventListener('DOMContentLoaded', function() {
 
     var purchaseLink, bioLink, biography, stores;
 
-    bioLink = document.getElementById('biography-link');
     purchaseLink = document.getElementById('purchase-link');
+    bioLink = document.getElementById('biography-link');
     biography = document.getElementById('biography');
     stores = document.getElementById('stores');
 
@@ -30,7 +30,22 @@
     nextButton = document.getElementById('next');
     waveBase = document.getElementById('base');
     waveCover = document.getElementById('cover');
+    canvas = document.getElementById('album-art-background');
     songEls = document.getElementById('songs').children;
+
+    var canvasContext = canvas.getContext('2d');
+    var img = new Image();
+
+    img.src = 'images/no-broadcast-album.jpg';
+    img.onload = resizeCanvas;
+
+    window.addEventListener('resize', resizeCanvas);
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      canvasContext.drawImage(img, 0, 0, window.innerWidth, window.innerHeight);
+    }
 
     // support use of space bar and arrow keys
     document.addEventListener('keydown', function(e) {
@@ -67,20 +82,6 @@
         el.style.display = 'block';
       } else {
         el.style.display = 'none';
-      }
-    }
-
-    // scale everything up for higher res screens
-    // using media queries resulted in a rendering bug when first viewing the page
-    // due to image not being loaded completely i believe - so using window.onload event
-    window.addEventListener('load', resize);
-    window.addEventListener('resize', resize);
-
-    function resize() {
-      if (window.innerWidth >= 1600 && window.innerHeight >= 900) {
-        document.documentElement.className = 'scale-up';
-      } else {
-        document.documentElement.className = '';
       }
     }
 

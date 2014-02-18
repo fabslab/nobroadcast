@@ -1,38 +1,23 @@
-html {
-  height: 100%;
-}
-
-html.scale-up {
-  -o-transform: scale(1.1) translate(4%, 4.5%);
-  -webkit-transform: scale(1.1) translate(4%, 4.5%);
-  -ms-transform: scale(1.1) translate(4%, 4.5%);
-  transform: scale(1.1) translate(4%, 4.5%);
-  width: 92%;
-}
-
-@-moz-document url-prefix() {
-  html.scale-up {
-    transform: none;
-    width: 100%;
-  }
-}
-
 body {
   font-family: 'helvetica neue', helvetica, arial, sans-serif;
   color: rgb(44, 44, 44);
-  height: 100%;
+  padding: 0;
   margin: 0;
   background-color: #e0e0e0;
-  background-image: url(../images/album.jpg);
-  background-position: center top;
-  background-repeat: no-repeat;
   overflow: hidden;
+}
+
+canvas {
+  position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 .player {
   width: 300px;
   margin: 0 auto;
-  margin-top: 80px;
+  margin-top: 50px;
   padding-right: 200px;
 }
 
@@ -158,7 +143,7 @@ a {
   width: 700px;
   height: 64px;
   margin: 0 auto;
-  margin-top: 240px;
+  margin-top: 13%;
   padding-right: 230px;
 }
 
@@ -169,7 +154,6 @@ a {
 
 .waveform #cover {
   background-image: url(../images/waveforms/1.png);
-  z-index: 9;
   width: 0;
   height: 64px;
 }
