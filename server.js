@@ -1,13 +1,13 @@
-var express = require('express')
+var staticServe = require('node-static')
   , http = require('http')
-  , path = require('path');
-  
-var app = express();
+  ,  path = require('path');
 
-app.set('port', process.env.PORT || 3000);
-  
-app.use(express.static(path.join(__dirname, 'public')));
+var fileServer = new staticServe.Server(path.join(__dirname, 'public'));
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log("Express server listening on port " + app.get('port'));
-});
+var port = process.env.PORT || 3000;
+
+http.createServer(function (request, response) {
+  request.addListener('end', function () {
+    fileServer.serve(request, response);
+  }).resume();
+}).listen(port);

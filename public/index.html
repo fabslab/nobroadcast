@@ -1,20 +1,58 @@
 <!DOCTYPE html>
-
+<html>
 <head>
-<meta charset="utf-8">
-<title>No Broadcast - Coming Soon</title>
-<link rel="shortcut icon" href="favicon.ico">
-<link rel="stylesheet" href="styles/main.css" />
+  <meta charset="utf-8">
+  <title>No Broadcast Album Debut</title>
+  <meta name="description" content="A streaming preview of the latest music album released from the 3 piece alternative rock band No Broadcast." />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="stylesheet" href="styles/main.css" />
 </head>
-
 <body>
 
-<div id="player-container">
-
-  <div id="teaser"></div>
-  
+<div class="links">
+  <a id="biography-link" href="javascript:;">
+    <img alt="Biography" src="images/bio.svg" />
+  </a>
+  <div id="biography" style="display:none">
+    No Broadcast are a three-piece hailing from Christchurch, NZ. They create high dynamic rock music with a strong
+    sense of immersion for the listener that is reminiscent of HDU, Jakob and Kerretta. After the release of their
+    defining self-titled debut album, they are on their
+    <a href="https://www.facebook.com/nobroadcast/events">biggest tour yet</a>.
+  </div>
+  <a id="purchase-link" href="javascript:;">
+    <img alt="Buy Now" src="images/buynow.svg" />
+  </a>
+  <div id="stores" style="display:none">
+    <li><a href="http://bandcamp.nobroadcast.com/" target="_blank">Bandcamp</a></li>
+    <li><a href="https://itunes.apple.com/us/album/no-broadcast/id664628199" target="itunes_store">iTunes</a></li>
+    <li><a href="http://www.cdbaby.com/cd/nobroadcast" target="_blank">CDBaby</a></li>
+    <li><a href="https://play.spotify.com/album/2NnONHGEYxLiQAkE0lGI2g" target="_blank">Spotify</a></li>
+  </div>
 </div>
-  <script src="scripts/main.js"></script> 
-</body>
 
+<div class="waveform">
+    <img id="base" src="images/waveforms/1-bg.png" />
+    <div id="cover"></div>
+</div>
+
+<div class="player">
+  <ul id="songs">
+    <li id="1" class="active">Reset the Sun</li>
+    <li id="2">Release</li>
+    <li id="3">More Wrong Than Right</li>
+    <li id="4">Constricted</li>
+    <li id="5">Drone Pt I</li>
+    <li id="6">Drone Pt II</li>
+    <li id="7">Collapse</li>
+    <li id="8">Driven</li>
+  </ul>
+  <div class="controls">
+    <i id="prev" class="sprite sprite-prev"></i>
+    <i id="play" class="sprite sprite-play"></i>
+    <i id="next" class="sprite sprite-next"></i>
+  </div>
+</div>
+
+<script src="scripts/main.js"></script>
+</body>
 </html>
